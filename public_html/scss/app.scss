@@ -122,7 +122,8 @@ ul {
 /// BACKGROUND IMAGES
 #index > header {
 	background-image: url('../img/index/sample_hero.jpg');
-	background-size: cover;	
+	background-size: 100% 100%;	
+	background-repeat: none;
 }
 #index .services {
 	background-image: url('../img/index/sample_services.jpg');
@@ -185,6 +186,9 @@ ul {
 .top-bar-left,
 .top-bar-right {
 	margin-top: 20px;
+}
+.curve-overlay {
+	width: 100vw;
 }
 /// INDEX SPECIFIC
 
