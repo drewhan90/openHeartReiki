@@ -105,7 +105,8 @@ p,
  	/// add animation / transition
 }
 /// Page Content
-section > .content {
+section > .content,
+footer > .content{
 	max-width: 701px;
 	margin: auto;
 	text-align: center;
@@ -161,6 +162,9 @@ ul {
 	background-repeat: no-repeat;
 	color: transparent;
 }
+.secondary-bg {
+	background-color: $secondary-color;
+}
 /// TOPBAR		
 .top-bar a {
 	font-weight: bold;
@@ -190,6 +194,21 @@ ul {
 .curve-overlay {
 	width: 100vw;
 }
+/// FOOTER
+#map {
+	width: 100vw;
+	height: 304px;
+}
+footer .logo {
+	max-width: 87px;
+	height: 87px;
+}
+footer .contact {
+	margin-left: 0;
+}
+footer .contact li *{
+	display: inline;
+}
 /// INDEX SPECIFIC
 
 //////////////
@@ -197,6 +216,9 @@ ul {
 //////////////
 .hidden {
 	display: none;
+}
+.text-left {
+	text-align:left;
 }
 .top-bar a:hover {
 	color: $secondary-color;
