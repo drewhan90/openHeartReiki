@@ -3,6 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'mixins';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -48,3 +49,156 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+////////////
+/// BASE ///
+////////////
+
+@font-face {
+    font-family: 'mathletebulky';
+    src: url('fonts/mathlete_bulky_macroman/Mathlete-Bulky-webfont.eot');
+    src: url('fonts/mathlete_bulky_macroman/Mathlete-Bulky-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mathlete_bulky_macroman/Mathlete-Bulky-webfont.woff') format('woff'),
+         url('fonts/mathlete_bulky_macroman/Mathlete-Bulky-webfont.ttf') format('truetype'),
+         url('fonts/mathlete_bulky_macroman/Mathlete-Bulky-webfont.svg#mathletebulky') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bodoni';
+    src: url('fonts/bodoni/BodoniStd.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+button {
+	font-family: 'mathletebulky';
+}
+h1 {
+	@include font-size(45);
+}
+h2,
+button {
+	@include font-size(36);
+}
+h3 {
+	@include font-size(28);
+}
+h4 {
+	@include font-size(14);
+}
+p,
+.top-bar a {
+	font-family: 'bodoni';
+	@include font-size(16);
+	/// add animation / transition
+}
+.primary-btn {
+	padding: 5px 10px;
+	background-color: $secondary-color;
+	color: $white;
+	border: 2px solid $secondary-color;
+ 	border-radius: 5px;
+ 	/// add animation / transition
+}
+/// Page Content
+section > .content {
+	max-width: 701px;
+	margin: auto;
+	text-align: center;
+}
+/// Default Hide List style
+ul {
+	list-style-type: none;
+}
+
+//////////////
+/// LAYOUT ///
+//////////////
+
+/// BACKGROUND IMAGES
+#index > header {
+	background-image: url('../img/index/sample_hero.jpg');
+	background-size: cover;	
+}
+#index .services {
+	background-image: url('../img/index/sample_services.jpg');
+}
+.divider {
+	display: block;
+	max-width: 190px;
+	height: 35px;
+	margin: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: transparent;
+}
+.title > .divider {
+	background-image: url('../img/divider_top.png');
+}
+.end > .divider {
+	background-image: url('../img/divider_bottom.png');
+}
+.services-list .learn {
+	background-image: url('../img/index/mandala_sm_vector01.png');	
+}
+.services-list .therapy {
+	background-image: url('../img/index/mandala_sm_vector02.png');
+}
+.services-list .yoga-women {
+	background-image: url('../img/index/mandala_sm_vector03.png');
+}
+.services-list .icon {
+	display: block;
+	max-width: 149px;
+	height: 149px;
+	margin: auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: transparent;
+}
+/// TOPBAR		
+.top-bar a {
+	font-weight: bold;
+	color: $primary-color;
+	text-transform: capitalize;
+}
+.top-bar {
+	max-width: 484px;
+	margin: auto;
+}
+.logo-wrapper {
+    position: relative; 
+}
+.logo-wrapper .logo {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 56%;
+	right: 50%;
+	top: -6px;
+	margin-left: -59px; 
+}
+.top-bar-left,
+.top-bar-right {
+	margin-top: 20px;
+}
+/// INDEX SPECIFIC
+
+//////////////
+/// STATES ///
+//////////////
+.hidden {
+	display: none;
+}
+.top-bar a:hover {
+	color: $secondary-color;
+}
+.primary-btn:hover {
+	background-color: $white;
+	color: $secondary-color;
+	border: 2px solid $secondary-color;
+}
