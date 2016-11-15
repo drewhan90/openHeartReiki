@@ -96,13 +96,21 @@ p,
 	@include font-size(16);
 	/// add animation / transition
 }
-.primary-btn {
+button {
 	padding: 5px 10px;
+	border-radius: 5px;
+}
+.primary-btn {
 	background-color: $secondary-color;
 	color: $white;
 	border: 2px solid $secondary-color;
- 	border-radius: 5px;
  	/// add animation / transition
+}
+.secondary-btn {
+	background-color: $white;
+	color: $secondary-color;
+	border: 2px solid $white;
+	/// add animation / transition
 }
 /// Page Content
 section > .content,
@@ -113,13 +121,32 @@ footer > .content{
 }
 /// Default Hide List style
 ul {
+	margin: 0;
 	list-style-type: none;
+}
+section {
+	padding: 70px 10px;
 }
 
 //////////////
 /// LAYOUT ///
 //////////////
-
+/// GENERAL 
+section .title {
+	margin-bottom: 40px;
+}
+section .end {
+	margin-top: 60px;
+}
+.btn-top {
+	position: fixed;
+	right: 5px;
+	top: 85%;
+}
+.btn-top span {
+	display: block;
+	margin-top: -11px;
+}
 /// BACKGROUND IMAGES
 #index > header {
 	background-image: url('../img/index/sample_hero.jpg');
@@ -128,6 +155,10 @@ ul {
 }
 #index .services {
 	background-image: url('../img/index/sample_services.jpg');
+	/// Parallax CSS
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .divider {
 	display: block;
@@ -174,6 +205,7 @@ ul {
 .top-bar {
 	max-width: 484px;
 	margin: auto;
+	padding-top: 20px;
 }
 .logo-wrapper {
     position: relative; 
@@ -194,9 +226,18 @@ ul {
 .curve-overlay {
 	width: 100vw;
 }
+/// POST
+.post-img {
+	border-radius: 50%;
+}
+.testimonials article {
+	padding: 30px 20px;
+	background-color: $white;
+	border-radius: 50px;
+}
 /// FOOTER
 #map {
-	width: 100vw;
+	width: 100%;
 	height: 304px;
 }
 footer .logo {
@@ -208,6 +249,9 @@ footer .contact {
 }
 footer .contact li *{
 	display: inline;
+}
+footer .content {
+	padding: 20px;
 }
 /// INDEX SPECIFIC
 
@@ -227,4 +271,28 @@ footer .contact li *{
 	background-color: $white;
 	color: $secondary-color;
 	border: 2px solid $secondary-color;
+}
+.secondary-btn:hover {
+	background-color: $secondary-color;
+	color: $white;
+	border: 2px solid $white;
+}
+@include screen(mobile) {
+	.top-bar-left,
+	.top-bar-right {
+		margin: 0;
+		text-align: center;
+	}
+	.top-bar-left {
+		margin-top: 100px;
+	}
+	.top-bar li {
+		width: 120px;
+		margin: auto;
+		border: 2px solid $primary-color;
+		border-radius: 5px;
+	}
+	.testimonials .post {
+		margin-bottom: 20px;
+	}
 }

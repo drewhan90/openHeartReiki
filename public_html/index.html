@@ -58,22 +58,22 @@
     <section class="services">
       <div class="content">
         <div class="title">
-          <h1>benefits of reiki</h1>
+          <h1>my services</h1>
           <img class="divider" src="" alt="section divider">
         </div>
         <!-- List of Services -->
         <div class="row">
           <ul class="services-list">
-            <li class="small-4 medium-4 columns">
-              <span class="learn icon">mandala icon</span>
+            <li class="medium-4 columns">
+              <span class="learn icon hide-for-small-only">mandala icon</span>
               <h2>learn reiki</h2>
             </li>
-            <li class="small-4 medium-4 columns">
-              <span class="therapy icon">mandala icon</span>
+            <li class="medium-4 columns">
+              <span class="therapy icon hide-for-small-only">mandala icon</span>
               <h2>reiki therapy</h2>
             </li>
-            <li class="small-4 medium-4 columns">
-              <span class="yoga-women icon">mandala icon</span>
+            <li class="medium-4 columns">
+              <span class="yoga-women icon hide-for-small-only">mandala icon</span>
               <h2>yoga &amp; women studies</h2>
             </li>
           </ul>
@@ -92,65 +92,67 @@
           <img class="divider" src="" alt="section divider">
         </div>
         <!-- Database Testimonial Posts (show recent 2) -->
-        <div class="post small-12 medium-6 columns">
-          <div class="overlay hidden">
-            <h2>read more</h2>
-          </div>
-          <article>
-            <!-- Post Content -->
-            <div class="row">
-              <p class="text-left small-12 medium-12 columns">
-                "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a medium language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia." 
-              </p>
+        <div class="row">
+          <div class="post small-12 medium-6 columns">
+            <div class="overlay hidden">
+              <h2>read more</h2>
             </div>
-            <!-- Post Description -->
-            <div class="row">
-              <img class="post-img medium-4 columns" src="" alt="">
-              <div class="post-desc medium-8 columns">
-                <h3>sarah jameson</h3>
-                <h4>nov 10 2016</h4>
+            <article>
+              <!-- Post Content -->
+              <div class="row">
+                <p class="text-left small-12 medium-12 columns">
+                  "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a medium language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia." 
+                </p>
               </div>
-            </div>
-          </article>
-        </div>
-        <div class="post medium-6 columns">
-          <div class="overlay hidden">
-            <h2>read more</h2>
-          </div>
-          <article>
-            <!-- Post Content -->
-            <div class="row">
-              <p class="text-left medium-12 columns">
-                "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a medium language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia." 
-              </p>
-            </div>
-            <!-- Post Description -->
-            <div class="row">
-              <img class="post-img medium-4 columns" src="" alt="">
-              <div class="post-desc medium-8 columns">
-                <h3>sarah jameson</h3>
-                <h4>nov 10 2016</h4>
+              <!-- Post Description -->
+              <div class="row">
+                <img class="post-img small-4 medium-4 columns" src="img/uploads/woman01.jpg" alt="post image">
+                <div class="post-desc text-left small-8 medium-8 columns">
+                  <h3>sarah jameson</h3>
+                  <h4>nov 10 2016</h4>
+                </div>
               </div>
+            </article>
+          </div>
+          <div class="post medium-6 columns">
+            <div class="overlay hidden">
+              <h2>read more</h2>
             </div>
-          </article>
+            <article>
+              <!-- Post Content -->
+              <div class="row">
+                <p class="text-left medium-12 columns">
+                  "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a medium language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia." 
+                </p>
+              </div>
+              <!-- Post Description -->
+              <div class="row">
+                <img class="post-img small-4 medium-4 columns" src="img/uploads/woman02.jpg" alt="post image">
+                <div class="post-desc text-left small-8 medium-8 columns">
+                  <h3>sarah jameson</h3>
+                  <h4>nov 10 2016</h4>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
 
         <div class="end">
-          <button class="primary-btn" href="">read more</button>
+          <button class="secondary-btn" href="">read more</button>
           <img class="divider" src="" alt="section divider">
         </div>
       </div>
     </section>
     <footer>
       <!-- Google Maps -->
-      <div id="map"></div>
+      <div id="map" class="hide-for-small-only"></div>
       <div class="content">
         <div class="row">
           <div class="medium-4 columns">
             <img class="logo" src="img/logo.png" alt="Open Heart Reiki">
             <p>copyright 2016.</p>
           </div>
-          <ul class="contact text-left medium-8 columns">
+          <ul class="contact text-left medium-8 columns hide-for-small-only">
             <li>
               <h3>address</h3>
               <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
@@ -166,6 +168,10 @@
           </ul>
         </div>
     </footer>
+    <button class="btn-top hidden hide-for-small-only">
+      <i class="fa fa-caret-up" aria-hidden="true"></i>
+      <span>up</span>
+    </button>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
@@ -174,6 +180,8 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcZ64MNob9_QjGF6zzZTHYcH5mWybEB4A&callback=initMap">
     </script>
+    <!-- FONT AWESOME -->
+    <script src="https://use.fontawesome.com/a2ca25c584.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

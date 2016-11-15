@@ -14,3 +14,21 @@ function initMap() {
 	});
 };
 
+$(document).ready(()=>{
+	/// Scroll Top animate speed
+	$('.btn-top').click(()=>{
+		$('html, body').animate({
+			scrollTop: $('header').offset().top
+		}, 1000);
+	});
+	/// FadeIn/Out on scroll bottom
+	$(this).scroll(()=>{
+		if($(this).scrollTop() > 800) {
+			$('.btn-top').fadeIn();
+		}
+		else {
+			$('.btn-top').fadeOut();
+		}
+	});
+});
+
