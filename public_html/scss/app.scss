@@ -167,7 +167,7 @@ section .end {
 	margin: auto;
 	background-size: contain;
 	background-repeat: no-repeat;
-	color: transparent;
+	text-indent: -9999px; /// hide html text
 }
 .title > .divider {
 	background-image: url('../img/divider_top.png');
@@ -191,7 +191,7 @@ section .end {
 	margin: auto;
 	background-size: contain;
 	background-repeat: no-repeat;
-	color: transparent;
+	text-indent: -9999px; /// hide html text
 }
 .secondary-bg {
 	background-color: $secondary-color;
@@ -225,6 +225,14 @@ section .end {
 }
 .curve-overlay {
 	width: 100vw;
+}
+/// RESPONSIVE MENU
+.title-bar .logo {
+	float: right;
+	width: 33px;
+}
+.title-bar {
+	background: $primary-color;
 }
 /// POST
 .post-img {
@@ -277,20 +285,21 @@ footer .content {
 	color: $white;
 	border: 2px solid $white;
 }
+/// MOBILE MEDIA SCREEN
 @include screen(mobile) {
+	.top-bar {
+		padding: 0;
+		background: $primary-color;
+	}
 	.top-bar-left,
 	.top-bar-right {
 		margin: 0;
-		text-align: center;
 	}
-	.top-bar-left {
-		margin-top: 100px;
+	.top-bar a {
+		color: $white;
 	}
-	.top-bar li {
-		width: 120px;
-		margin: auto;
-		border: 2px solid $primary-color;
-		border-radius: 5px;
+	.top-bar a:hover {
+		background: $white;
 	}
 	.testimonials .post {
 		margin-bottom: 20px;

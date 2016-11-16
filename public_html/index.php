@@ -8,31 +8,8 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body id="index">
-    <header>
-      <nav class="top-bar">
-        <!-- Logo -->
-        <div class="logo-wrapper">
-          <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="Open Heart Reiki"></a>
-          </div>
-        </div>
-        <!-- LEFT NAV -->
-        <div class="top-bar-left">
-          <ul class="vertical small-horizontal medium-horizontal menu">
-            <li><a href="about.html">about</a></li>
-            <li><a href="services.html">services</a></li>
-          </ul>
-        </div>
-        <!-- RIGHT NAV -->
-        <div class="top-bar-right">
-          <ul class="vertical small-horizontal medium-horizontal menu">
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <img class="curve-overlay" src="img/index/overlay_hero.png" alt="Transparent curved image overlay">
-    </header>
+    <!-- HEADER + NAV MENU -->
+    <?php include 'partials/header.php' ?>
     <!-- Static Content: Benifits of Reiki -->
     <section class="benefits">
       <div class="content">
@@ -143,45 +120,7 @@
         </div>
       </div>
     </section>
-    <footer>
-      <!-- Google Maps -->
-      <div id="map" class="hide-for-small-only"></div>
-      <div class="content">
-        <div class="row">
-          <div class="medium-4 columns">
-            <img class="logo" src="img/logo.png" alt="Open Heart Reiki">
-            <p>copyright 2016.</p>
-          </div>
-          <ul class="contact text-left medium-8 columns hide-for-small-only">
-            <li>
-              <h3>address</h3>
-              <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
-            </li>
-            <li>
-              <h3>phone</h3>
-              <p>(604) 682-2787</p>
-            </li>
-            <li>
-              <h3>email</h3>
-              <p>sasha@vanarts.com</p>
-            </li>
-          </ul>
-        </div>
-    </footer>
-    <button class="btn-top hidden hide-for-small-only">
-      <i class="fa fa-caret-up" aria-hidden="true"></i>
-      <span>up</span>
-    </button>
-
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/what-input/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-    <!-- GOOGLE MAPS JS -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcZ64MNob9_QjGF6zzZTHYcH5mWybEB4A&callback=initMap">
-    </script>
-    <!-- FONT AWESOME -->
-    <script src="https://use.fontawesome.com/a2ca25c584.js"></script>
-    <script src="js/app.js"></script>
+    <!-- FOOTER + TOP BTN + SCRIPT LINKS-->
+    <?php require 'partials/footer.php' ?>
   </body>
 </html>
