@@ -1,13 +1,13 @@
 $(document).foundation();
 
 function initMap() {
-	/// Home Coordinates
+	// Home Coordinates
 	var home = {lat: 49.282824, lng: -123.115143}; 
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
 		center: home
 	});
-	/// Map Marker
+	// Map Marker
 	var marker = new google.maps.Marker({
 		position: home,
 		map: map
@@ -15,13 +15,13 @@ function initMap() {
 };
 
 $(document).ready(()=>{
-	/// Scroll Top animate speed
+	// Scroll Top animate speed
 	$('.btn-top').click(()=>{
 		$('html, body').animate({
 			scrollTop: $('header').offset().top
 		}, 1000);
 	});
-	/// FadeIn/Out on scroll bottom
+	// FadeIn/Out on scroll bottom
 	$(this).scroll(()=>{
 		if($(this).scrollTop() > 800) {
 			$('.btn-top').fadeIn();
@@ -30,5 +30,12 @@ $(document).ready(()=>{
 			$('.btn-top').fadeOut();
 		}
 	});
+	// Display Curved Overlay only on Index Page
+	if($('#index').length != 0){
+		$('.curve-overlay').removeClass('hidden');
+	};
+	if($('#blog').length != 0){
+		$('#menu .blog').addClass('active');
+	};
 });
 

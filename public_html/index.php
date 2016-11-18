@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Open Heart Reiki</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body id="index">
@@ -71,9 +71,6 @@
         <!-- Database Testimonial Posts (show recent 2) -->
         <div class="row">
           <div class="post small-12 medium-6 columns">
-            <div class="overlay hidden">
-              <h2>read more</h2>
-            </div>
             <article>
               <!-- Post Content -->
               <div class="row">
@@ -92,9 +89,6 @@
             </article>
           </div>
           <div class="post medium-6 columns">
-            <div class="overlay hidden">
-              <h2>read more</h2>
-            </div>
             <article>
               <!-- Post Content -->
               <div class="row">

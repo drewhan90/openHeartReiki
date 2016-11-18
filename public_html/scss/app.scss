@@ -91,7 +91,8 @@ h4 {
 	@include font-size(14);
 }
 p,
-.top-bar a {
+.top-bar a,
+.side-nav a {
 	font-family: 'bodoni';
 	@include font-size(16);
 	/// add animation / transition
@@ -127,12 +128,19 @@ ul {
 section {
 	padding: 70px 10px;
 }
+.center-page {
+	max-width: 1260px;
+	margin: auto;
+}
+.pagination {
+	margin-top: 1rem;
+}
 
 //////////////
 /// LAYOUT ///
 //////////////
 /// GENERAL 
-section .title {
+div.title {
 	margin-bottom: 40px;
 }
 section .end {
@@ -153,7 +161,7 @@ section .end {
 	background-size: 100% 100%;	
 	background-repeat: none;
 }
-#index .services {
+#index section.services {
 	background-image: url('../img/index/sample_services.jpg');
 	/// Parallax CSS
 	background-attachment: fixed;
@@ -262,12 +270,51 @@ footer .content {
 	padding: 20px;
 }
 /// INDEX SPECIFIC
-
+/// BLOG SPECIFIC
+.img-wrap {
+	max-height: 400px;
+	overflow: hidden;
+}
+#blog .post {
+	padding-right: 50px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $primary-color;
+}
+#blog .post:not(:first-child){
+	padding-top: 30px;
+}
+#blog .post img {
+	display: block;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	bottom: 100px;
+}
+#blog .post p,
+.side-nav li:not(.title) {
+	padding: 15px 0;
+}
+#blog .post .title {
+	margin: 0;
+}
+.side-nav .date {
+	margin: 0;
+}
+#blog .testimonials {
+	background-color: $secondary-color;
+}
+#blog .testimonials .title {
+	text-align: center;
+}
 //////////////
 /// STATES ///
 //////////////
 .hidden {
 	display: none;
+}
+.menu .active>a {
+	background-color: transparent;
+	color: $secondary-color;
 }
 .text-left {
 	text-align:left;
