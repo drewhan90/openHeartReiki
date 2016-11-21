@@ -242,6 +242,18 @@ section .end {
 .title-bar {
 	background: $primary-color;
 }
+/// STICKY BAR
+.section-list {
+	max-width: 701px;
+	margin: auto;
+	text-transform: capitalize;
+}
+.sticky-container {
+	top: 23px;
+}
+.sticky-container > .title-bar {
+	opacity: 0.8; 
+}
 /// POST
 .post-img {
 	border-radius: 50%;
@@ -270,6 +282,16 @@ footer .content {
 	padding: 20px;
 }
 /// INDEX SPECIFIC
+/// ABOUT SPECIFIC
+#about .list ul {
+	font-family: 'bodoni';
+	text-align: left;
+	text-transform: capitalize;
+	list-style-type: circle;
+}
+#about .list {
+	height: 280px;
+}
 /// BLOG SPECIFIC
 .img-wrap {
 	max-height: 400px;
@@ -351,6 +373,9 @@ footer .content {
 	}
 	.testimonials .post {
 		margin-bottom: 20px;
+	}
+	.sticky-container {
+		top: 0;
 	}
 	// BLOG
 	#blog .post img {
