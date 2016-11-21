@@ -37,6 +37,11 @@ $(document).ready(()=>{
 	if($('#blog').length != 0){
 		$('#menu .blog').addClass('active');
 	};
+	// Hide Footer Map on Contact Page
+	if($('#contact').length != 0){
+		console.log('works');
+		$('footer #map').addClass('hidden');
+	}
 	// Smooth Scrolling
 	$(function() {
 		$('a[href*="#"]:not([href="#"])').click(function() {

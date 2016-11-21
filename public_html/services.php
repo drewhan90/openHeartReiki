@@ -7,7 +7,7 @@
     <title>Open Heart Reiki</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body id="about">
+  <body id="services">
   	<!-- HEADER + NAV MENU -->
     <?php include 'partials/header.php' ?>
     <!-- STICKY HEADER -->

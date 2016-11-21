@@ -20,7 +20,9 @@
 				<li class="services"><a href="#history">the Usui System of Reiki</a></li>
 				<li class="services"><a href="#aneesha">about aneesha</a></li>
 			</ul>
+		</div>
 	    </div>
+	    
 	  </div>
 	</div>
 	<!-- Static Content: REIKI INTRO -->
@@ -41,7 +43,7 @@
 				When connected with Reiki in a conscious way, an individual has the possibility of healing, awakening, and enlivening through this practice. 
 			</p>
 			<div class="end">
-				<button class="primary-btn" href="">see reiki services</button>
+				<button class="primary-btn" href="">see services</button>
 				<span class="divider">divider</span>
 			</div>
 		</div>
@@ -84,7 +86,7 @@
 				</ul>
 			</div>
 			<div class="end">
-				<button class="secondary-btn" href="">contact for reiki treatment</button>
+				<button class="secondary-btn" href="">contact for info</button>
 				<span class="divider">divider</span>
 			</div>
 		</div>
@@ -112,7 +114,7 @@
 			</div>
 		</section>
 	<!-- Static Content: ABOUT ANEESHA -->
-	<section id="aneesha" class="aneesha">
+	<section id="aneesha" class="aneesha secondary-bg">
 		<div class="content">
 			<div class="title">
 				<h1>about Aneesha</h1>

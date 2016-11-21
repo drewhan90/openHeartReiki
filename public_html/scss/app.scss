@@ -246,6 +246,7 @@ section .end {
 .section-list {
 	max-width: 701px;
 	margin: auto;
+	padding: 0 35px;
 	text-transform: capitalize;
 }
 .sticky-container {
@@ -281,6 +282,12 @@ footer .contact li *{
 }
 footer .content {
 	padding: 20px;
+}
+// FORMS
+.contact-form label {
+	font-family: 'bodoni';
+	text-align: left;
+	text-transform: capitalize;
 }
 /// INDEX SPECIFIC
 /// ABOUT SPECIFIC
