@@ -61,7 +61,7 @@
 			</ul>
 	    </section>
 	    <!-- SIDE NAV -->
-	    <section class="medium-2 columns">
+	    <section class="medium-2 columns hide-for-small-only">
 	    	<ul class="side-nav" role="navigation" title="blog navigation">
 	    		<li class="title"><h2>recent post</h2></li>
 	    		<li role="menuitem">

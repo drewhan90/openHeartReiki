@@ -334,6 +334,7 @@ footer .content {
 }
 /// MOBILE MEDIA SCREEN
 @include screen(mobile) {
+	// TOP BAR
 	.top-bar {
 		padding: 0;
 		background: $primary-color;
@@ -351,4 +352,14 @@ footer .content {
 	.testimonials .post {
 		margin-bottom: 20px;
 	}
-}
+	// BLOG
+	#blog .post img {
+		bottom: 0;
+	}
+	#blog .post {
+		padding-right: 0;
+	}
+	.orbit-container {
+		overflow: visible;
+	}
+} 
