@@ -252,7 +252,8 @@ section .end {
 	top: 23px;
 }
 .sticky-container > .title-bar {
-	opacity: 0.8; 
+	border-top: 1.5px solid $primary-color;
+	background: $white;
 }
 /// POST
 .post-img {

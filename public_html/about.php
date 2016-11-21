@@ -23,7 +23,7 @@
 	    </div>
 	  </div>
 	</div>
-	<!-- Static Content: Benifits of Reiki -->
+	<!-- Static Content: REIKI INTRO -->
 	<section id="reiki" class="reiki">
 		<div class="content">
 			<div class="title">
@@ -46,6 +46,7 @@
 			</div>
 		</div>
 	</section>
+	<!-- Static Content: REIKI BENEFITS -->
 	<section id="benefit" class="benefits secondary-bg">
 		<div class="content">
 			<div class="title">
@@ -88,6 +89,7 @@
 			</div>
 		</div>
 	</section>
+	<!-- Static Content: REIKI HISTORY -->
 	<section id="history" class="history">
 		<div class="content">
 			<div class="title">
@@ -109,7 +111,8 @@
 				</div>
 			</div>
 		</section>
-	<section id="aneesha" class="sasha">
+	<!-- Static Content: ABOUT ANEESHA -->
+	<section id="aneesha" class="aneesha">
 		<div class="content">
 			<div class="title">
 				<h1>about Aneesha</h1>
