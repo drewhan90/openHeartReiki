@@ -74,7 +74,8 @@ h1,
 h2,
 h3,
 h4,
-button {
+button,
+label {
 	font-family: 'mathletebulky';
 }
 h1 {
@@ -84,7 +85,8 @@ h2,
 button {
 	@include font-size(36);
 }
-h3 {
+h3,
+label {
 	@include font-size(28);
 }
 h4 {
@@ -283,12 +285,6 @@ footer .contact li *{
 footer .content {
 	padding: 20px;
 }
-// FORMS
-.contact-form label {
-	font-family: 'bodoni';
-	text-align: left;
-	text-transform: capitalize;
-}
 /// INDEX SPECIFIC
 /// ABOUT SPECIFIC
 #about .list ul {
@@ -335,6 +331,32 @@ footer .content {
 }
 #blog .testimonials .title {
 	text-align: center;
+}
+/// CONTACT SPECIFIC
+.contact-form .primary-btn {
+	width: 100%;
+}
+///////////////
+///// CMS /////
+///////////////
+// Default medium-gray color
+$medium-gray: #cacaca;
+// Default global padding
+$global-padding: 1rem;
+// Global value used for all elements that have a border radius.
+$global-radius: 3px;
+
+// Setting the form border color
+$form-border-color: $medium-gray;
+// Setting the form padding
+$form-padding: $global-padding;
+// Setting the form border radius
+$form-radius: $global-radius;
+
+.log-in-form {
+  border: 1px solid $form-border-color;
+  padding: $form-padding;
+  border-radius: $form-radius;
 }
 //////////////
 /// STATES ///

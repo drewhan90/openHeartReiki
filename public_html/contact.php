@@ -19,8 +19,22 @@
       </div>
       <!-- CONTACT PAGE MAP -->
       <div id="map"></div>
+      <ul class="contact text-left show-for-small">
+      <li>
+        <h3>address</h3>
+        <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
+      </li>
+      <li>
+        <h3>phone</h3>
+        <p>(604) 682-2787</p>
+      </li>
+      <li>
+        <h3>email</h3>
+        <p>sasha@vanarts.com</p>
+      </li>
+    </ul>
       <!-- CONTACT FORM -->
-      <form class="contact-form" method="post">
+      <form class="contact-form text-left" method="post">
         <label>your name*
           <input type="text" class="name" required>
         </label>
