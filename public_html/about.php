@@ -147,8 +147,6 @@
 			</div>
 		</div>
 	</section>
-	
-
 		<!-- FOOTER + TOP BTN + SCRIPT LINKS-->
 		<?php require 'partials/footer.php' ?>
 	</body>

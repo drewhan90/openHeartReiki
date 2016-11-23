@@ -10,6 +10,7 @@
   <body id="index">
     <!-- HEADER + NAV MENU -->
     <?php include 'partials/header.php' ?>
+    
     <!-- Static Content: Benifits of Reiki -->
     <section class="benefits">
       <div class="content">

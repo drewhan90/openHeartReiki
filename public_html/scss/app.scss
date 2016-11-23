@@ -4,6 +4,7 @@
 @import 'foundation';
 @import 'motion-ui';
 @import 'mixins';
+@import 'dropzone';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -336,28 +337,7 @@ footer .content {
 .contact-form .primary-btn {
 	width: 100%;
 }
-///////////////
-///// CMS /////
-///////////////
-// Default medium-gray color
-$medium-gray: #cacaca;
-// Default global padding
-$global-padding: 1rem;
-// Global value used for all elements that have a border radius.
-$global-radius: 3px;
 
-// Setting the form border color
-$form-border-color: $medium-gray;
-// Setting the form padding
-$form-padding: $global-padding;
-// Setting the form border radius
-$form-radius: $global-radius;
-
-.log-in-form {
-  border: 1px solid $form-border-color;
-  padding: $form-padding;
-  border-radius: $form-radius;
-}
 //////////////
 /// STATES ///
 //////////////
@@ -418,3 +398,57 @@ $form-radius: $global-radius;
 		overflow: visible;
 	}
 } 
+
+///////////////
+///// CMS /////
+///////////////
+.cms * {
+	font-family: 'bodoni';
+}
+.cms h2 {
+	@include font-size(36);
+}
+.cms label {
+	@include font-size(18);
+	text-transform: capitalize;
+}
+#dashboard .top-bar {
+	max-width: 100%;
+	padding-top: 0;
+	border: 2px solid $primary-color;
+}
+#dashboard .side-nav {
+	padding: 0;
+	height: 100vh;
+	border: 2px solid $primary-color;
+}
+#dashboard .menu a {
+	color : $primary-color;
+}
+#dashboard .menu a:hover {
+	background: $primary-color;
+	color : $secondary-color;
+}
+#dashboard section {
+	padding: 0;
+}
+
+// Default medium-gray color
+$medium-gray: #cacaca;
+// Default global padding
+$global-padding: 1rem;
+// Global value used for all elements that have a border radius.
+$global-radius: 3px;
+
+// Setting the form border color
+$form-border-color: $medium-gray;
+// Setting the form padding
+$form-padding: $global-padding;
+// Setting the form border radius
+$form-radius: $global-radius;
+
+.log-in-form {
+  border: 1px solid $form-border-color;
+  padding: $form-padding;
+  border-radius: $form-radius;
+}

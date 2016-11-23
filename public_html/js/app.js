@@ -1,5 +1,3 @@
-$(document).foundation();
-
 function initMap() {
 	// Home Coordinates
 	var home = {lat: 49.282824, lng: -123.115143}; 
@@ -15,6 +13,14 @@ function initMap() {
 };
 
 $(document).ready(()=>{
+	// Foundation JS
+	$(function () {
+        $(document).foundation();
+    });
+	// JQUERY UI tabs
+    $(function() {
+    	$( "#tabs" ).tabs();
+  	});
 	// Scroll Top animate speed
 	$('.btn-top').click(()=>{
 		$('html, body').animate({
