@@ -432,6 +432,37 @@ footer .content {
 #dashboard section {
 	padding: 0;
 }
+.side-tabs {
+	position: fixed;
+	height: 100vh;
+	padding: 0;
+	border-right: 2px solid $secondary-color;
+}
+.side-tabs li {
+	padding: 20px 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+.side-tabs li a {
+	display: block;
+}
+.side-tabs li:hover {
+	background-color: $secondary-color;
+	
+}
+.side-tabs li:hover a{
+	color: $white;
+}	
+.tab-content {
+	padding: 10px 50px;
+}
+.copy-url {
+	border: 1px solid $primary-color;
+	font-size: 10px;
+}
+.copy-url p {
+	font-size: 10px;
+}
 
 // Default medium-gray color
 $medium-gray: #cacaca;

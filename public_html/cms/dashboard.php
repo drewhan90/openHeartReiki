@@ -17,7 +17,7 @@ else{
 	</head>
 	<body id="dashboard" class="cms">
 		<div id="tabs">
-			<div class="medium-1 columns">
+			<div class="side-tabs medium-1 columns">
 				<ul>
 					<li><a href="#tabs-1">home</a></li>
 					<li><a href="#tabs-2">media</a></li>
@@ -27,7 +27,7 @@ else{
 					<li><a href="logout.php">log out</a></li>
 				</ul>
 			</div>
-			<div class="medium-11 columns">
+			<div class="tab-content medium-11 columns">
 				<!-- HOME TAB -->
 				<div id="tabs-1">
 					<section>
@@ -40,7 +40,7 @@ else{
 				<!-- MEDIA -->
 				<div id="tabs-2">
 					<div class="medium-12 columns">
-						<form action="upload.php" class="dropzone" id="my-awesome-dropzone" method="post" enctype="multipart/form-data">
+						<form action="file_Upload.php" class="dropzone" id="my-awesome-dropzone" method="post" enctype="multipart/form-data">
 						</form>
 					</div>
 					<div class="medium-12 columns">
@@ -65,7 +65,9 @@ else{
 								echo '<img src="../img/uploads/'.$fileName.'">';
 								echo '<p class="medium-10 columns">uploaded on '.$uploaded.'</p>';
 								echo '<a class="medium-2 columns"href="delete.php">delete</a>';
-								echo '<p>'.$url.$fileName.'</p></div>';
+								echo '<button id="clip-btn" class="button expanded" data-clipboard-text="'.$url.$fileName.'">
+    									Copy URL to clipboard
+										</button></div>';
 							}
 							else {
 								echo '<p>0 file uploaded</p>';
@@ -91,7 +93,7 @@ else{
 					<!-- ADD BLOG MODAL BOX -->
 					<div class="reveal" id="add-blog" data-reveal>
 						<h2>write a new blog</h2>
-						<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+						<form action="post_Upload.php" method="post">
 							<label>title</label>
 							<input type="text" name="title" required>
 							<label>categories</label>
@@ -102,26 +104,6 @@ else{
 							<textarea name="editor1" required></textarea>
 							<input type="submit" name="post-blog" value="post">
 						</form>
-						<?php
-							if(isset($_POST['post-blog'])){
-						        // CONNECT TO DATABASE
-						        include("dbconfig.php");
-
-						        if(!$dbconfig){
-						            echo "Connection Failed";
-						        }
-						        else {
-						            $title = mysqli_real_escape_string($dbconfig,$_POST['title']);
-						            $category = mysqli_real_escape_string($dbconfig,$_POST['category']);
-						            $thumbnail = mysqli_real_escape_string($dbconfig,$_POST['thumbnail']);
-						            $comment = mysqli_real_escape_string($dbconfig,$_POST['editor1']);
-
-						            if(isset($_POST['title']) AND isset($_POST['editor1'])){
-						                $dbconfig->query("INSERT INTO blog_table (title, category, thumbnail, comment, uploaded) VALUES('".$title."','".$category."','".$thumbnail."','".$comment."','".date("Y-m-d")."')");
-						            }
-						        }
-						    }
-						?>
 						<!-- MODAL CLOSE -->
 						<button class="close-button" data-close aria-label="Close modal" type="button">
 							<span aria-hidden="true">&times;</span>
@@ -163,7 +145,10 @@ else{
 		<!-- FONT AWESOME -->
 		<script src="https://use.fontawesome.com/a2ca25c584.js"></script>
 		<script src="../js/dropzone.js"></script>
+		<!-- CKEDITOR -->
 		<script src="../bower_components/ckeditor/ckeditor.js"></script>
+		<!-- CLIPBOARD JS -->
+		<script src="../bower_components/clipboard/dist/clipboard.min.js"></script>
 		<script src="../js/app.js"></script>
 
 	</body>

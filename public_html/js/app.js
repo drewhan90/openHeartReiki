@@ -65,5 +65,19 @@ $(document).ready(()=>{
 	});
 	// CKEDITOR
 	CKEDITOR.replace( 'editor1' );
+	// CLIPBOARD
+	const clipBtn = document.getElementById('clip-btn');
+    const clipboard = new Clipboard(clipBtn);
+    // clipboard is successful
+    clipboard.on('success', function(e) {
+	    $('#clip-btn').css('background', 'green');
+		$('#clip-btn').html('URL copied');
+	    e.clearSelection();
+	});
+    // clipboard is unsuccessful
+	clipboard.on('error', function(e) {
+	    $('#clip-btn').css('background', 'red');
+	    $('#clip-btn').html('URL was not copied');
+	});
 });
 
