@@ -14,9 +14,7 @@ function initMap() {
 
 $(document).ready(()=>{
 	// Foundation JS
-	$(function () {
-        $(document).foundation();
-    });
+	$(document).foundation();
 	// JQUERY UI tabs
     $(function() {
     	$( "#tabs" ).tabs();
