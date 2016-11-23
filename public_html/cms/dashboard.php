@@ -22,8 +22,8 @@ else{
 					<li><a href="#tabs-1">home</a></li>
 					<li><a href="#tabs-2">media</a></li>
 					<li><a href="#tabs-3">about page</a></li>
-					<li><a href="#tabs-3">services page</a></li>
-					<li><a href="#tabs-3">blog page</a></li>
+					<li><a href="#tabs-4">services page</a></li>
+					<li><a href="#tabs-5">blog page</a></li>
 					<li><a href="logout.php">log out</a></li>
 				</ul>
 			</div>
@@ -39,16 +39,115 @@ else{
 				</div>
 				<!-- MEDIA -->
 				<div id="tabs-2">
-					<div class="medium-10 columns">
+					<div class="medium-12 columns">
 						<form action="upload.php" class="dropzone" id="my-awesome-dropzone" method="post" enctype="multipart/form-data">
 						</form>
 					</div>
-					<div class="medium-2 columns">
+					<div class="medium-12 columns">
+						<?php
+							// CONNECT TO DATABASE
+						include("dbconfig.php");
+						if(!$dbconfig){
+							echo "Connection Failed";
+						}
+						else {
+
+							$sql_query = "SELECT * FROM files_table";
+							$result = mysqli_query($dbconfig,$sql_query);
+							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+							$count=mysqli_num_rows($result);
+							if($count == 1){
+								$fileName = $row["file_name"];
+								$uploaded = $row["uploaded"];
+								// file url (change)
+								$url = "http://localhost/projects/openHeartReiki/public_html/img/uploads/";
+								echo '<div class="upload-preview medium-4 columns">';
+								echo '<img src="../img/uploads/'.$fileName.'">';
+								echo '<p class="medium-10 columns">uploaded on '.$uploaded.'</p>';
+								echo '<a class="medium-2 columns"href="delete.php">delete</a>';
+								echo '<p>'.$url.$fileName.'</p></div>';
+							}
+							else {
+								echo '<p>0 file uploaded</p>';
+							}
+						}
+						?>
 					</div>
 				</div>
+				<!-- ABOUT PAGE -->
 				<div id="tabs-3">
 					<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
 					<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+				</div>
+				<!-- SERVICES PAGE -->
+				<div id="tabs-4">
+					<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+					<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+				</div>
+				<!-- BLOG PAGE -->
+				<div id="tabs-5">
+					<h2>blog page</h2>
+					<a data-open="add-blog">add blog</a>
+					<!-- ADD BLOG MODAL BOX -->
+					<div class="reveal" id="add-blog" data-reveal>
+						<h2>write a new blog</h2>
+						<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+							<label>title</label>
+							<input type="text" name="title" required>
+							<label>categories</label>
+							<input type="radio" name="category" value="tip" checked> tips
+							<input type="radio" name="category" value="testimonial"> testimonial <br>
+							<label>thumbnail image</label>
+							<input type="text" name="thumbnail" placeholder="image url">
+							<textarea name="editor1" required></textarea>
+							<input type="submit" name="post-blog" value="post">
+						</form>
+						<?php
+							if(isset($_POST['post-blog'])){
+						        // CONNECT TO DATABASE
+						        include("dbconfig.php");
+
+						        if(!$dbconfig){
+						            echo "Connection Failed";
+						        }
+						        else {
+						            $title = mysqli_real_escape_string($dbconfig,$_POST['title']);
+						            $category = mysqli_real_escape_string($dbconfig,$_POST['category']);
+						            $thumbnail = mysqli_real_escape_string($dbconfig,$_POST['thumbnail']);
+						            $comment = mysqli_real_escape_string($dbconfig,$_POST['editor1']);
+
+						            if(isset($_POST['title']) AND isset($_POST['editor1'])){
+						                $dbconfig->query("INSERT INTO blog_table (title, category, thumbnail, comment, uploaded) VALUES('".$title."','".$category."','".$thumbnail."','".$comment."','".date("Y-m-d")."')");
+						            }
+						        }
+						    }
+						?>
+						<!-- MODAL CLOSE -->
+						<button class="close-button" data-close aria-label="Close modal" type="button">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!-- BLOG TABLE -->
+					<table class="hover stack">
+						<thead>
+							<tr>
+								<th><input type="checkbox" id="select_all"></th>
+								<th>id</th>
+								<th>title</th>
+								<th>categories</th>
+								<th>date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input name="checkbox[]" type="checkbox" id="checkbox[]" class="checkbox" value="<?php ?>"></td>
+								<td>1</td>
+								<td><a href="postDetail.php?id=<?php ?>">Reiki Not Yet Mainstream</a></td>
+								<td>tips</td>
+								<td>nov 17 2016</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -64,6 +163,7 @@ else{
 		<!-- FONT AWESOME -->
 		<script src="https://use.fontawesome.com/a2ca25c584.js"></script>
 		<script src="../js/dropzone.js"></script>
+		<script src="../bower_components/ckeditor/ckeditor.js"></script>
 		<script src="../js/app.js"></script>
 
 	</body>

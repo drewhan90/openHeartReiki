@@ -63,5 +63,7 @@ $(document).ready(()=>{
 			}
 		});
 	});
+	// CKEDITOR
+	CKEDITOR.replace( 'editor1' );
 });
 
