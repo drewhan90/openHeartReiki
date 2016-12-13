@@ -28,15 +28,15 @@
       <div class="row">
         <div class="medium-4 columns">  
             <h2><i class="fa fa-map-marker" aria-hidden="true"></i> address</h2>
-          <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
+          <p>153 Powell street, Vancouver BC V6A3Z1</p>
         </div>
         <div class="medium-4 columns">
           <h2><i class="fa fa-phone" aria-hidden="true"></i> phone</h2>
-          <p>(604) 682-2787</p>
+          <p>(778) 7086160</p>
         </div>
         <div class="medium-4 columns">
           <h2><i class="fa fa-envelope" aria-hidden="true"></i> email</h2>
-          <p>sasha@vanarts.com</p>
+          <p>aneeshareiki@gmail.com</p>
         </div>
       </div>
     </div>

@@ -107,15 +107,3 @@ $(document).ready(()=>{
 
 	
 });
-
-/*$(window).unload(function() {
-	console.log('leave?');
-	$('.leaving').removeClass('hidden');
-	return "Bye now!";
-});*/
-
-$(window).on('beforeunload ',function() {
-    console.log('leave?');
-	$('#exampleModal1').removeClass('hidden');
-	return "Bye now!";
-});

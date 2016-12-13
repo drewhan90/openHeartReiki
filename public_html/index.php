@@ -19,19 +19,19 @@
           <span class="divider">divider</span>
         </div>
         <p>
-          Are you stressed? 
+          Are you stressed?
           <br>
           Are you having sleeping problems?
           <br> 
           Experiencing physical or mental chronic pain?
           <br>
-          I strongly believe that all healing comes from within. 
+          I strongly believe that all healing comes from within.
           <br>
           However, we need help to initiate this process of internal healing. 
           <br>
-          Reiki is a practice that can help to awaken your body energies.
+          Once you balance these energies your body will heal and nourish itself.
           <br> 
-          One can balance these energies to help the body heal and nourish itself.
+          Reiki is a practice that can help awaken your body energies and connect the physical to the spiritual.
         </p>
         <div class="end">
           <button class="primary-btn cta-btn"><a href="about.php">learn more</a></button>
@@ -55,7 +55,7 @@
             </li>
             <li class="medium-4 columns">
               <span class="therapy icon hide-for-small-only">mandala icon</span>
-              <h2>reiki therapy</h2>
+              <h2>reiki treatment</h2>
             </li>
             <li class="medium-4 columns">
               <span class="yoga-women icon hide-for-small-only">mandala icon</span>
@@ -88,7 +88,6 @@
               </div>
               <!-- Post Description -->
               <div class="row">
-                <img class="post-img small-4 medium-2 columns" src="img/uploads/woman01.jpg" alt="post image">
                 <div class="post-desc text-left small-8 medium-10 columns">
                   <h3>sarah jameson</h3>
                   <h4>nov 10 2016</h4>
@@ -106,7 +105,6 @@
               </div>
               <!-- Post Description -->
               <div class="row">
-                <img class="post-img small-4 medium-2 columns" src="img/uploads/woman02.jpg" alt="post image">
                 <div class="post-desc text-left small-8 medium-10 columns">
                   <h3>sarah jameson</h3>
                   <h4>nov 10 2016</h4>

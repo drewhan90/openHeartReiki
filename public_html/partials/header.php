@@ -30,5 +30,6 @@
       </ul>
     </div>
   </nav>
+  <div class="background"></div>
   <img class="curve-overlay hidden" src="img/index/overlay_hero.png" alt="Transparent curved image overlay">
 </header>

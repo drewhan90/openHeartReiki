@@ -62,10 +62,10 @@
 		<div class="row">
 			<ul class="mental-list medium-6 columns">
 				<h1>mental health</h1>
-				<li><h3>relaxation of the mind</h3></li>
-				<li><h3>helps unlock suppressed feelings</h3></li>
+				<li><h3>relaxes the mind</h3></li>
+				<li><h3>helps to unlock suppressed feelings</h3></li>
 				<li><h3>soothes emotional distress</h3></li>
-				<li><h3>balance energies in the body</h3></li>
+				<li><h3>balances energies in the body</h3></li>
 				<li><h3>promotes positive emotions</h3></li>
 				<li><h3>promotes positive changes in life</h3></li>
 			</ul>
@@ -76,7 +76,7 @@
 				<li><h3>relaxes tight muscles</h3></li>
 				<li><h3>increase stamina</h3></li>
 				<li><h3>strengthens imune system</h3></li>
-				<li><h3>faster recovery</h3></li>
+				<li><h3>speeds up recovery</h3></li>
 			</ul>
 		</div>
 		<div class="end">
