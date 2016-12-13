@@ -12,28 +12,35 @@
     <?php include 'partials/header.php' ?>
     
     <!-- Static Content: Benifits of Reiki -->
-    <section class="benefits">
+    <section id="first" class="benefits module">
       <div class="content">
         <div class="title">
-          <h1>benefits of reiki</h1>
+          <h1>open heart reiki</h1>
           <span class="divider">divider</span>
         </div>
         <p>
-          Are you tired, have sleeping problems, trying to manage the chronic pain or stressed at work? I strongly believe that all healing comes from within. However, sometimes we need help to initiate this process of internal healing. Reiki is a very simple practice that can help to awake your body energies and balance them to help your body to heal and nourish itself.
+          Are you stressed? 
+          <br>
+          Are you having sleeping problems?
+          <br> 
+          Experiencing physical or mental chronic pain?
+          <br>
+          I strongly believe that all healing comes from within. 
+          <br>
+          However, we need help to initiate this process of internal healing. 
+          <br>
+          Reiki is a practice that can help to awaken your body energies.
+          <br> 
+          One can balance these energies to help the body heal and nourish itself.
         </p>
-        <ul class="benefits-list">
-          <li><h2>soothe</h2></li>
-          <li><h2>strengthen</h2></li>
-          <li><h2>stimulate</h2></li>
-        </ul>
         <div class="end">
-          <button class="primary-btn" href="">learn more</button>
+          <button class="primary-btn cta-btn"><a href="about.php">learn more</a></button>
           <span class="divider">divider</span>
         </div>
       </div>
     </section>
     <!-- Static Content: My Services -->
-    <section class="services">
+    <section class="services module">
       <div class="content">
         <div class="title">
           <h1>my services</h1>
@@ -52,18 +59,18 @@
             </li>
             <li class="medium-4 columns">
               <span class="yoga-women icon hide-for-small-only">mandala icon</span>
-              <h2>yoga &amp; women studies</h2>
+              <h2>yoga &amp; women circles</h2>                                         
             </li>
           </ul>
         </div>
         <div class="end">
-          <button class="primary-btn" href="">learn more</button>
+          <button class="primary-btn cta-btn"><a href="services.php">learn more</a></button>
           <span class="divider">divider</span>
         </div>
       </div>
     </section>
     <!-- Static Content: Testimonials -->
-    <section class="testimonials secondary-bg">
+    <section class="testimonials secondary-bg module">
       <div class="content">
         <div class="title">
           <h1>testimonials</h1>
@@ -81,8 +88,8 @@
               </div>
               <!-- Post Description -->
               <div class="row">
-                <img class="post-img small-4 medium-4 columns" src="img/uploads/woman01.jpg" alt="post image">
-                <div class="post-desc text-left small-8 medium-8 columns">
+                <img class="post-img small-4 medium-2 columns" src="img/uploads/woman01.jpg" alt="post image">
+                <div class="post-desc text-left small-8 medium-10 columns">
                   <h3>sarah jameson</h3>
                   <h4>nov 10 2016</h4>
                 </div>
@@ -99,8 +106,8 @@
               </div>
               <!-- Post Description -->
               <div class="row">
-                <img class="post-img small-4 medium-4 columns" src="img/uploads/woman02.jpg" alt="post image">
-                <div class="post-desc text-left small-8 medium-8 columns">
+                <img class="post-img small-4 medium-2 columns" src="img/uploads/woman02.jpg" alt="post image">
+                <div class="post-desc text-left small-8 medium-10 columns">
                   <h3>sarah jameson</h3>
                   <h4>nov 10 2016</h4>
                 </div>
@@ -110,11 +117,18 @@
         </div>
 
         <div class="end">
-          <button class="secondary-btn" href="">read more</button>
+          <button class="secondary-btn cta-btn"><a href="blog.php">read more</a></button>
           <span class="divider">divider</span>
         </div>
       </div>
     </section>
+    <div class="leaving reveal hidden" id="exampleModal1" data-reveal>
+      <h1>You are about to leave the page</h1>
+      <p class="lead">Goodbye!!!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <!-- FOOTER + TOP BTN + SCRIPT LINKS-->
     <?php require 'partials/footer.php' ?>
   </body>

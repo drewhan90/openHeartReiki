@@ -11,30 +11,44 @@
   	<!-- HEADER + NAV MENU -->
     <?php include 'partials/header.php' ?>
   <!-- Static Content: Benifits of Reiki -->
-  <section id="reiki" class="reiki">
+  <section>
     <div class="content">
       <div class="title">
-        <h1>contact us</h1>
+        <h1>my contacts</h1>
         <span class="divider">divider</span>
+      </div>
+      <div class="intro">
+        <p>Thank you for visiting my site and considering my services. <br> Please make an appointment by phone, direct email or <a href="#message"> message.</a></p>
       </div>
       <!-- CONTACT PAGE MAP -->
       <div id="map"></div>
-      <ul class="contact text-left show-for-small">
-      <li>
-        <h3>address</h3>
-        <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
-      </li>
-      <li>
-        <h3>phone</h3>
-        <p>(604) 682-2787</p>
-      </li>
-      <li>
-        <h3>email</h3>
-        <p>sasha@vanarts.com</p>
-      </li>
-    </ul>
+  </section>
+  <section class="secondary-bg module">
+    <div class="content">
+      <div class="row">
+        <div class="medium-4 columns">  
+            <h2><i class="fa fa-map-marker" aria-hidden="true"></i> address</h2>
+          <p>570 Dunsmuir St #600, Vancouver, BC V6B 1Y1</p>
+        </div>
+        <div class="medium-4 columns">
+          <h2><i class="fa fa-phone" aria-hidden="true"></i> phone</h2>
+          <p>(604) 682-2787</p>
+        </div>
+        <div class="medium-4 columns">
+          <h2><i class="fa fa-envelope" aria-hidden="true"></i> email</h2>
+          <p>sasha@vanarts.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="message" class="module">
+    <div class="content">
+      <div class="title">
+        <h1>send me a message</h1>
+        <span class="divider">divider</span>
+      </div>
       <!-- CONTACT FORM -->
-      <form class="contact-form text-left" method="post">
+      <form class="contact-form text-left medium-12 columns" method="post">
         <label>your name*
           <input type="text" class="name" required>
         </label>
@@ -46,12 +60,13 @@
         </label>
         <!-- FORM BUTTON -->
         <div class="end">
-          <button class="primary-btn" href="">send</button>
+          <button class="primary-btn cta-btn">send</button>
           <span class="divider">divider</span>
         </div>
       </form>
     </div>
   </section>
+
     <!-- FOOTER + TOP BTN + SCRIPT LINKS-->
     <!-- FOOTER MAP IS HIDDEN ON CONTACT PAGE -->
     <?php require 'partials/footer.php' ?>

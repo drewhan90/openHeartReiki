@@ -79,6 +79,9 @@ button,
 label {
 	font-family: 'mathletebulky';
 }
+input {
+    font-family: 'bodoni' !important;
+}
 h1 {
 	@include font-size(45);
 }
@@ -102,24 +105,22 @@ p,
 }
 button {
 	padding: 5px 10px;
-	border-radius: 5px;
+	border-radius: 50px;
 }
 .primary-btn {
 	background-color: $secondary-color;
-	color: $white;
 	border: 2px solid $secondary-color;
  	/// add animation / transition
 }
 .secondary-btn {
 	background-color: $white;
-	color: $secondary-color;
 	border: 2px solid $white;
 	/// add animation / transition
 }
 /// Page Content
 section > .content,
 footer > .content{
-	max-width: 701px;
+	max-width: 1200px;
 	margin: auto;
 	text-align: center;
 }
@@ -129,7 +130,10 @@ ul {
 	list-style-type: none;
 }
 section {
-	padding: 70px 10px;
+	padding: 60px 10px;
+}
+#contact section {
+	padding: 40px 10px;
 }
 .center-page {
 	max-width: 1260px;
@@ -151,25 +155,67 @@ section .end {
 }
 .btn-top {
 	position: fixed;
-	right: 5px;
+	right: 30px;
 	top: 85%;
 }
 .btn-top span {
 	display: block;
 	margin-top: -11px;
 }
+.cta-btn {
+	margin-bottom: 30px;
+}
+.text-content {
+	text-align: left;
+}
+.content .img-wrap img {
+    border: 1px solid transparent;
+    border-radius: 10px
+}
+.content .img-wrap.horizontal {
+	width: 60%;
+	margin: auto;
+}
+.img-wrap + .intro{
+	margin-top: 50px;
+}
+.secondary-bg a {
+	color: $white;
+}
+.orbit-slide a:hover {
+	color: $primary-color;
+	text-decoration: underline;
+}
+.orbit-slide a {
+	color: $secondary-color;
+}
+.primary-btn.cta-btn > a {
+	color: $white;
+}
+.secondary-btn.cta-btn > a {
+	color: $secondary-color;
+}
+.secondary-btn.cta-btn > a:hover {
+	color: $white;
+	text-decoration: none;
+}
+.primary-btn.cta-btn a:hover {
+	color: $secondary-color;
+	text-decoration: none;
+}
 /// BACKGROUND IMAGES
 #index > header {
-	background-image: url('../img/index/sample_hero.jpg');
+	background-image: url('../img/index/hero_bg.jpg');
 	background-size: 100% 100%;	
-	background-repeat: none;
+	background-repeat: no-repeat;
 }
 #index section.services {
-	background-image: url('../img/index/sample_services.jpg');
+	background-image: url('../img/index/services_bg.jpg');
 	/// Parallax CSS
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
 .divider {
 	display: block;
@@ -206,6 +252,9 @@ section .end {
 }
 .secondary-bg {
 	background-color: $secondary-color;
+}
+.content a:hover {
+	text-decoration: underline;
 }
 /// TOPBAR		
 .top-bar a {
@@ -249,25 +298,34 @@ section .end {
 .section-list {
 	max-width: 701px;
 	margin: auto;
-	padding: 0 35px;
+	//padding: 0 35px;
 	text-transform: capitalize;
 }
 .sticky-container {
 	top: 23px;
 }
 .sticky-container > .title-bar {
+    font-family: 'bodoni';
 	border-top: 1.5px solid $secondary-color;
 	background: $white;
+}
+.subMenu>li>a {
+    padding: 0.7rem 1.6rem;
 }
 /// POST
 .post-img {
 	border-radius: 50%;
 }
-.testimonials article {
+.testimonials article,
+.learn article {
 	padding: 30px 20px;
 	background-color: $white;
 	border-radius: 50px;
 }
+.learn article {
+	text-align: center;
+}
+
 /// FOOTER
 #map {
 	width: 100%;
@@ -288,17 +346,18 @@ footer .content {
 }
 /// INDEX SPECIFIC
 /// ABOUT SPECIFIC
-#about .list ul {
-	font-family: 'bodoni';
+.mental-list {
+	text-align: right;
+}
+.physical-list {
 	text-align: left;
-	text-transform: capitalize;
-	list-style-type: circle;
+	border-left: 2px solid $primary-color;
 }
 #about .list {
-	height: 280px;
+	height: 360px;
 }
 /// BLOG SPECIFIC
-.img-wrap {
+#blog .img-wrap {
 	max-height: 400px;
 	overflow: hidden;
 }
@@ -306,6 +365,10 @@ footer .content {
 	padding-right: 50px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid $primary-color;
+	text-overflow: ellipsis; 
+}
+#blog .more-post {
+	padding: 40px 45px;
 }
 #blog .post:not(:first-child){
 	padding-top: 30px;
@@ -321,6 +384,16 @@ footer .content {
 .side-nav li:not(.title) {
 	padding: 15px 0;
 }
+.post .post-text {
+	max-height: 130px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.more-post .post-text {
+	margin-top: 50px;
+}
+
 #blog .post .title {
 	margin: 0;
 }
@@ -333,9 +406,18 @@ footer .content {
 #blog .testimonials .title {
 	text-align: center;
 }
+#blog .testimonials p {
+	margin: 0;
+}
 /// CONTACT SPECIFIC
 .contact-form .primary-btn {
 	width: 100%;
+}
+.contact-form .end {
+	margin-bottom: 60px;
+}
+#contact .intro {
+	padding: 30px 0;
 }
 
 //////////////
@@ -356,13 +438,23 @@ footer .content {
 }
 .primary-btn:hover {
 	background-color: $white;
-	color: $secondary-color;
 	border: 2px solid $secondary-color;
 }
 .secondary-btn:hover {
 	background-color: $secondary-color;
-	color: $white;
 	border: 2px solid $white;
+}
+// Slide ins
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
 }
 /// MOBILE MEDIA SCREEN
 @include screen(mobile) {
@@ -397,7 +489,23 @@ footer .content {
 	.orbit-container {
 		overflow: visible;
 	}
+	.mental-list,
+	.physical-list {
+		text-align: center;
+	}
+	.physical-list {
+		border-top: 2px solid $primary-color;
+		border-left: none;
+	}
+	.aneesha .content .text-content {
+		margin-top: 50px;
+	}
 } 
+@include screen(tablet) {
+	.aneesha .content .text-content {
+		margin-top: 50px;
+	}
+}
 
 ///////////////
 ///// CMS /////
@@ -416,6 +524,9 @@ footer .content {
 	max-width: 100%;
 	padding-top: 0;
 	border: 2px solid $primary-color;
+}
+#dashboard .top-bar.edit {
+	border: none;
 }
 #dashboard .side-nav {
 	padding: 0;
@@ -463,6 +574,10 @@ footer .content {
 .copy-url p {
 	font-size: 10px;
 }
+.edit-delete li {
+	display: inline;
+}
+
 
 // Default medium-gray color
 $medium-gray: #cacaca;

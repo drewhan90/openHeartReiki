@@ -1,6 +1,6 @@
 <?php
-if(isset($_POST['post-blog'])){
-						        // CONNECT TO DATABASE
+if(isset($_POST['submit'])){
+    // CONNECT TO DATABASE
 	include("dbconfig.php");
 
 	if(!$dbconfig){
@@ -12,8 +12,15 @@ if(isset($_POST['post-blog'])){
 		$thumbnail = mysqli_real_escape_string($dbconfig,$_POST['thumbnail']);
 		$comment = mysqli_real_escape_string($dbconfig,$_POST['editor1']);
 
-		if(isset($_POST['title']) AND isset($_POST['editor1'])){
-			$dbconfig->query("INSERT INTO blog_table (title, category, thumbnail, comment, uploaded) VALUES('".$title."','".$category."','".$thumbnail."','".$comment."','".date("Y-m-d")."')");
+		$postQuery = "INSERT INTO blog_table (title, category, thumbnail, comment, uploaded) VALUES('".$title."','".$category."','".$thumbnail."','".$comment."','".date("Y-m-d")."')";
+		$result = mysqli_query($dbconfig, $postQuery);
+
+		// if post successful
+		if($result) {
+			header('Location: dashboard.php');
+		}
+		else {
+			echo "Problem with posting";
 		}
 	}
 }
